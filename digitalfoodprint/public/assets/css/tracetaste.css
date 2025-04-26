@@ -1,0 +1,206 @@
+.hero {
+    width: 100%
+
+  }
+
+  .hero-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 5vw;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hero-text {
+    flex: 1;
+    max-width: 700px;
+    padding-left: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2.25rem;
+    color: #44622c;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    padding: 4rem 2rem;
+    background-image: url('../images/tracetaste/Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .card {
+    background: white;
+    border: 3px dashed #8dc63f;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card h3 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    width: 80%;
+    border-radius: 20px;
+    position: absolute;
+    top: -20px;
+    font-weight: bold;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+  }
+  
+  .card button {
+    background-color: #2f6135;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .card button:hover {
+    background-color: #3b7544;
+  }
+  
+  .next-page {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .next-page img {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .trace-taste-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .truck-icon {
+    width: 80px;
+    height: auto;
+  }
+  
+  .trace-taste-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+  }
+  
+  .trace-taste-text .trace {
+    color: #3b7544;
+    font-size: 3rem; 
+  }
+  
+  .trace-taste-text .taste {
+    color: #4CAF50;
+    font-size: 3rem;
+  }
+
+  /* Modal styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  padding-top: 0; 
+  left: 0;
+  top: 0;
+  width: 100vw; 
+  height: 100vh; 
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background: transparent;
+  padding: 0;
+  border: none;
+  width: 100%;
+  max-width: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.flowchart-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 0;
+}
