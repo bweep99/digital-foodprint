@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Foodprint</title>
+  <title>Nusantara Harvest</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -36,7 +36,6 @@
           background-color: #006400;
           color: white;
     }
-
     .game-container {
       max-width: 900px;
       margin: 2rem auto;
@@ -60,7 +59,7 @@
     }
     .region-info h3 {
       margin-bottom: 0.25rem;
-      color:  #006400;
+      color: #007bff;
     }
   </style>
 </head>
@@ -69,21 +68,22 @@
     <h1>NUSANTARA HARVEST</h1>
     <p>Pick the right crops for each region in Indonesia!</p>
     <a href='/growpedia' class="button-link">Back to Growpedia</a>
+  </header> 
   </header>
 
   <div class="game-container">
     <label for="region">Choose a region:</label>
     <select id="region">
-      <option value="Sumatra island">Sumatra Island</option>
-      <option value="Java island">Java Island</option>
-      <option value="Kalimantan island">Kalimantan Island</option>
+      <option value="P.Sumatera">P.Sumatera</option>
+      <option value="P.Jawa">P.Jawa</option>
+      <option value="P.Kalimantan">P.Kalimantan</option>
     </select>
 
     <label for="crop">Choose a crop:</label>
     <select id="crop">
-      <option value="Rice">Rice</option>
-      <option value="Rubber">Rubber</option>
-      <option value="Palm Oil">Palm Oil</option>
+      <option value="Padi">Padi</option>
+      <option value="Karet">Karet</option>
+      <option value="Sawit">Sawit</option>
     </select>
 
     <button onclick="checkAnswer()">Check</button>
@@ -92,19 +92,18 @@
     <div class="region-info">
       <h3>Regions and Provinces:</h3>
       <ul>
-      <li><strong>Sumatra Island</strong>: North Sumatra, South Sumatra, West Sumatra, Bengkulu, Riau, Riau Islands, Jambi, Lampung, Bangka Belitung</li>
-     <li><strong>Java Island</strong>: Banten, West Java, DKI Jakarta, Central Java, East Java, Special Region of Yogyakarta</li>
-<li><strong>Kalimantan Island</strong>: West Kalimantan, East Kalimantan, South Kalimantan, Central Kalimantan, North Kalimantan</li>
-
+        <li><strong>P.Sumatera</strong>: Sumatera Utara, Sumatera Selatan, Sumatera Barat, Bengkulu, Riau, Kepulauan Riau, Jambi, Lampung, Bangka Belitung</li>
+        <li><strong>P.Jawa</strong>: Banten, Jawa Barat, DKI Jakarta, Jawa Tengah, Jawa Timur, D.I. Yogyakarta </li>
+        <li><strong>P.Kalimantan</strong>: Kalimantan Barat, Kalimantan Timur, Kalimantan Selatan, Kalimantan Tengah, Kalimantan Utara</li>
       </ul>
     </div>
   </div>
 
   <script>
     const correctAnswers = {
-      "Sumatra Island": "Palm Oil", 
-      "Java Island":"Rice",
-      "Kalimantan Island": "Rubber",
+      "P.Sumatera": "Sawit", 
+      "P.Jawa":"Padi",
+      "P.Kalimantan": "Karet",
     };
 
     function checkAnswer() {
@@ -113,10 +112,10 @@
       const result = document.getElementById("result");
 
       if (correctAnswers[region] === crop) {
-        result.innerHTML = `✅ Correct! ${crop} is a/an authentic crop of ${region}.`;
+        result.innerHTML = `✅ Benar! ${crop} cocok ditanam di wilayah ${region}.`;
         result.style.color = 'green';
       } else {
-        result.innerHTML = `❌ Wrong! ${crop} is not a/an authentic crop of ${region}.`;
+        result.innerHTML = `❌ Salah! ${crop} bukan hasil utama wilayah ${region}.`;
         result.style.color = 'red';
       }
     }
