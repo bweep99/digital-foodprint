@@ -27,28 +27,148 @@ The web application consists of 3 main pages:
 
 ```
 digital-foodprint/
-├── app/                   # CodeIgniter app logic
+├── app/
+│   ├── Config/
+│   │   ├── Boot/
+│   │   │   ├── development.php
+│   │   │   ├── production.php
+│   │   │   └── testing.php
+│   │   ├── App.php
+│   │   ├── Autoload.php
+│   │   ├── Cache.php
+│   │   ├── Commands.php
+│   │   ├── ContentSecurityPolicy.php
+│   │   ├── Constants.php
+│   │   ├── Cors.php
+│   │   ├── Database.php
+│   │   ├── Doctype.php
+│   │   ├── Email.php
+│   │   ├── Encryption.php
+│   │   ├── Events.php
+│   │   ├── Exceptions.php
+│   │   ├── Filters.php
+│   │   ├── Format.php
+│   │   ├── Generators.php
+│   │   ├── Honeypot.php
+│   │   ├── Images.php
+│   │   ├── Inflector.php
+│   │   ├── Kint.php
+│   │   ├── Logger.php
+│   │   ├── Mimes.php
+│   │   ├── Modules.php
+│   │   ├── Paths.php
+│   │   ├── Registrar.php
+│   │   ├── Routes.php
+│   │   ├── Security.php
+│   │   ├── Services.php
+│   │   ├── Session.php
+│   │   ├── Toolbar.php
+│   │   └── Validation.php
+│   ├── Controllers/
+│   │   ├── Articles.php
+│   │   ├── BaseController.php
+│   │   └── Home.php
+│   ├── Database/
+│   │   ├── Migrations/.gitkeep
+│   │   └── Seeds/.gitkeep
+│   ├── Filters/.gitkeep
+│   ├── Helpers/.gitkeep
+│   ├── Language/
+│   │   ├── en/
+│   │   │   └── Validation.php
+│   │   └── .gitkeep
+│   ├── Libraries/.gitkeep
+│   ├── Models/
+│   │   ├── .gitkeep
+│   │   └── simplearticlemodel.php
+│   ├── ThirdParty/.gitkeep
+│   └── Views/
+│       ├── articles/
+│       │   ├── index.php
+│       │   └── view.php
+│       ├── errors/
+│       │   ├── cli/
+│       │   │   ├── error_404.php
+│       │   │   └── error_exception.php
+│       │   └── html/
+│       │       ├── error_400.php
+│       │       ├── debug.css
+│       │       ├── debug.js
+│       │       └── production.php
+│       ├── home/
+│       │   ├── agritales.php
+│       │   ├── ecobit.php
+│       │   ├── growpedia.php
+│       │   ├── index.php
+│       │   ├── nusantara.php
+│       │   ├── ship_it_out.php
+│       │   └── tracetaste.php
+│       ├── layouts/
+│       │   ├── main.php
+│       │   └── stuff.css
+│       └── welcome_message.php
+│
 ├── public/
 │   ├── assets/
 │   │   ├── css/
-│   │   │   ├── global.css
-│   │   │   ├── index.css
-│   │   │   ├── trace.css
+│   │   │   ├── agritales.css
 │   │   │   ├── growpedia.css
-│   │   │   └── agritales.css
-│   │   ├── js/
-│   │   │   ├── index.js
-│   │   │   ├── trace.js
-│   │   │   ├── growpedia.js
-│   │   │   └── agritales.js
-│   │   └── images/
+│   │   │   ├── styles.css
+│   │   │   └── tracetaste.css
+│   │   ├── images/
+│   │   │   ├── agriculture/
+│   │   │   ├── growpedia/
+│   │   │   ├── homepage/
+│   │   │   └── tracetaste/
+│   │   │       ├── jawa/
+│   │   │       ├── kalimantan/
+│   │   │       ├── sumatra/
+│   │   │       └── trucks/
+│   │   └── js/
+│   │       └── script.js
+│   ├── .htaccess
+│   ├── favicon.ico
+│   ├── index.php
+│   └── robots.txt
+│
+├── tests/
+│   ├── database/ExampleDatabaseTest.php
+│   ├── session/ExampleSessionTest.php
+│   ├── unit/HealthTest.php
+│   ├── _support/
+│   │   ├── Database/
+│   │   │   ├── Migrations/
+│   │   │   │   └── 2020-02-22-222222_example_migration.php
+│   │   │   └── Seeds/
+│   │   │       └── ExampleSeeder.php
+│   │   ├── Libraries/
+│   │   │   └── ConfigReader.php
+│   │   └── Models/
+│   │       └── ExampleModel.php
+│   ├── .htaccess
 │   ├── index.html
-│   ├── trace-taste.html
-│   └── growpedia.html
+│   └── README.md
+│
 ├── writable/
+│   ├── cache/index.html
+│   ├── logs/index.html
+│   ├── session/index.html
+│   ├── uploads/index.html
+│   ├── .htaccess
+│   ├── articles.json
+│   └── index.html
+│
 ├── .env
-└── README.md
-```
+├── .gitignore
+├── LICENSE
+├── builds
+├── composer.json
+├── composer.lock
+├── env
+├── phpunit.xml.dist
+├── preload.php
+└── spark
+
 
 ---
 
@@ -103,13 +223,6 @@ digital-foodprint/
 
 > ℹ️ PHP 8.0 and 7.4 are no longer supported
 
----
-
-## 🤝 Contribution & Credits
-
-Created by **[Your Name/Team]** for educational and exploratory purposes.
-
----
 
 ## 📖 Learn More
 
